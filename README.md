@@ -1,5 +1,25 @@
 [![Build Status](https://secure.travis-ci.org/LExpress/symfony1.png?branch=master)](http://travis-ci.org/LExpress/symfony1)
 
+About this version
+------------------
+
+This is a community driven fork of symfony 1, as official support has been [interrupted in November 2012](http://symfony.com/blog/symfony-1-4-end-of-maintenance-what-does-it-mean).
+
+**Do not use it for new projects: this version is great to improve existing symfony1 applications, but [Symfony2](http://symfony.com/) is the way to go today.**
+
+All the enhancements and BC breaks are listed in the [WHATS_NEW](https://github.com/LExpress/symfony1/blob/master/WHATS_NEW.md) file, this include:
+
+- [DIC](https://github.com/LExpress/symfony1/wiki/ServiceContainer)
+- Composer support
+- PHP 5.5 support
+- performance boost
+- new widgets & validators
+- some tickets fixed from the symfony trac
+- ...
+
+About symfony
+-------------
+
 Symfony is a complete framework designed to optimize the development of web applications by way of several key features.
 For starters, it separates a web application's business rules, server logic, and presentation views.
 It contains numerous tools and classes aimed at shortening the development time of a complex web application.
@@ -14,27 +34,21 @@ It runs on *nix and Windows platforms.
 Requirements
 ------------
 
-PHP 5.2.4 and up. See prerequisites on http://symfony.com/legacy/doc/getting-started/1_4/en/02-Prerequisites
+PHP 5.3.4 and up. See prerequisites on http://symfony.com/legacy/doc/getting-started/1_4/en/02-Prerequisites
 
 Installation
 ------------
 
 See http://symfony.com/legacy/doc/getting-started/1_4/en/03-Symfony-Installation
 
-Get the framework with all its dependencies:
+Option 1: Using [Composer](http://getcomposer.org/doc/00-intro.md) as dependency management:
 
-    git clone https://github.com/LExpress/symfony1.git symfony1
-    cd symfony1
-    git submodule update --init 
-
-Add the framework to your project with [Composer](http://getcomposer.org/doc/00-intro.md):
-
-    composer require lexpress/symfony1 dev-master
+    composer require lexpress/symfony1 v1.5.*
     composer install
 
-Add the framework to your project with submodule:
+Option 2: Using Git submodules:
   
-    git init
+    git init # your project
     git submodule add https://github.com/LExpress/symfony1.git lib/vendor/symfony
     git submodule update --init --recursive
 
@@ -46,4 +60,4 @@ Read the official [symfony1 documentation](http://symfony.com/legacy)
 Contributing
 ------------
 
-You can let pull requests or create an issue.
+You can send pull requests or create an issue.
