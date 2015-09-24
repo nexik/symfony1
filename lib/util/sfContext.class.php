@@ -451,6 +451,11 @@ class sfContext implements ArrayAccess
       $this->factories['serviceContainer']->setService('sf_formatter', new sfFormatter());
       $this->factories['serviceContainer']->setService('sf_user', $this->getUser());
       $this->factories['serviceContainer']->setService('sf_routing', $this->getRouting());
+
+      if (file_exists($file = \sfConfig::get('sf_config_dir').DIRECTORY_SEPARATOR.'parameters.ini'))
+      {
+        $this->factories['serviceContainer']->addParameters(parse_ini_file($file, true));
+      }
     }
 
     return $this->factories['serviceContainer'];
